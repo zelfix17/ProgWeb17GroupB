@@ -1,0 +1,22 @@
+ /*universal selector*/
+* {color: blue;}
+
+                body { background-image: url("background.jpg"); 
+                    background-repeat: repeat-y;
+                }
+
+                /*element selector*/
+                h1,h2,h3 {color:darkorange; text-align: center; font-size: 20px;}
+                p {color: green; text-align: justify; font-size: medium;}
+                h2 {color: darkmagenta; text-align: right;}
+
+                /*id selector*/
+                #myPar { text-align: left; font-family: 'Times New Roman', Times, serif;
+                    background-color: lightyellow; }
+                
+                /*class selector*/
+                .specialPar { text-align: justify; font-family: Courier New, Courier, monospace;
+                background-color: aliceblue; border: 1px solid red; }
+
+                p.specialPar { text-align: right; color: purple; 
+                    background-color:palegreen; border: 1px dashed green; }

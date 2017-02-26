@@ -1,0 +1,31 @@
+#header {
+    position: absolute;
+    border: 3px solid red;
+    width: 800px;
+    left: 20px;
+    height: 100px;
+}
+#menu {
+    position: absolute; 
+    border: 3px solid green;
+    width: 800px;
+    left: 20px;
+    height: 40px;
+    top: 120px;
+}
+#konten1 {
+    position: absolute;
+    border: 3px solid blue;
+    width: 390px;
+    left: 20px;
+    top: 180px;
+    height: 460px;
+}
+#konten2 {
+    position: absolute;
+    border: 3px solid darkorange;
+    width: 390px;
+    left: 430px;
+    top: 180px;
+    height: 460px;
+}
