@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">SIUKDW</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="jumbotron">
+            <h2>Selamat Datang di Website SIUKDW</h2>
+            <p>Many users already have downloaded Bootstrap from MaxCDN when visiting another site. As a result, it will be
+                loaded from cache when they visit your site, which leads to faster loading time. Also, most CDN's will make
+                sure that once a user requests a file from it, it will be served from the server closest to them, which also
+                leads to faster loading time.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="text-center">Form Vertical</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="firstname">First Name :</label>
+                        <input type="text" name="firstname" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name :</label>
+                        <input type="text" name="lastname" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender :</label>
+                        <div class="form-control">
+                            <input type="radio" name="gender" value="Male">Male &nbsp;
+                            <input type="radio" name="gender" value="Female">Female
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="City">City</label>
+                        <select name="city" class="form-control">
+                            <option value="Yogyakarta">Yogyakarta</option>
+                            <option value="Jakarta">Jakarta</option>
+                            <option value="Bandung">Bandung</option>
+                            <option value="Surabaya">Surabaya</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-center">Form Horizontal</h3>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="firstname" class="control-label col-md-3">First Name :</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="firstname" placeholder="insert first name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname" class="control-label col-md-3">Last Name :</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="lastname" placeholder="insert last name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="age" class="control-label col-md-3">Age :</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="age" placeholder="insert age">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
