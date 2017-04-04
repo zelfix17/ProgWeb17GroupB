@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sample Loop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <label for="txtJumlah">Jumlah :</label>
+        <input type="text" id="txtJumlah" placeholder="isi jumlah bilangan">
+        <button type="button" onclick="HitungBilangan()" >Tampilkan</button>
+        <br><hr>
+        <p id="parHasil"></p>
+        <hr>
+        <button onclick="ContohArray()">Contoh Array</button>
+        <button onclick="ContohObject()">Contoh Object</button>
+    <script>
+        function HitungBilangan(){
+            var jumlah = parseInt(document.getElementById("txtJumlah").value);
+            
+            var hasil = "";
+            for(i=1;i<=jumlah;i++){
+                if(i % 3 == 0){
+                    hasil += i + "<br>";
+                }
+            }
+            document.getElementById("parHasil").innerHTML = hasil;
+        }
+
+        function ContohArray(){
+            var arrNama = ["erick","budi","bambang","bejo","amir"];
+            var hasil = "";
+            for(i=0;i<arrNama.length;i++)
+            {
+                hasil += arrNama[i] + "\n";
+            }
+            alert(hasil);
+        }
+
+        function ContohObject(){
+            var mhs1 = {nim:"72120011",nama:"Budi",ipk:3.2};
+
+            var arrMhs = [
+                {nim:"72120011",nama:"Budi",ipk:3.2},
+                {nim:"72120012",nama:"Bambang",ipk:3.3}];
+
+            var hasil = "";
+            for(i=0;i<arrMhs.length;i++)
+            {
+                hasil += arrMhs[i].nim + " " + arrMhs[i].nama + " " + arrMhs[i].ipk + "\n";
+            }
+            alert(hasil);
+        }
+    </script>
+    </body>
+</html>

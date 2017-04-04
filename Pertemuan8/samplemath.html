@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sample Math</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <fieldset>
+            <legend>Form Math</legend>
+
+            <label for="txtBil1">Masukan Bil 1 :</label><br>
+            <input type="text" id="txtBil1" placeholder="masukan bil 1"><br><br>
+
+            <label for="txtBil2">Masukan Bil 2 :</label><br>
+            <input type="text" id="txtBil2" placeholder="masukan bil 2"><br><br>
+
+            <label for="txtHasil">Hasil :</label><br>
+            <input type="text" id="txtHasil" readonly="readonly"><br><br>
+
+            <input type="radio" name="operator" id="rdTambah" value="Tambah" />Tambah &nbsp;
+            <input type="radio" name="operator" id="rdKurang" value="Kurang" />Kurang &nbsp;<br><br>
+
+            <button type="button" onclick="Hitung()">Hitung</button>
+        </fieldset>
+
+        <script>
+            function Hitung(){
+                var bil1 = parseFloat(document.getElementById("txtBil1").value);
+                var bil2 = parseFloat(document.getElementById("txtBil2").value);
+
+                var hasil = 0.0;
+                if(document.getElementById("rdTambah").checked) {
+                    hasil = bil1 + bil2;
+                }
+                else {
+                    hasil = bil1-bil2;
+                }
+                
+                document.getElementById("txtHasil").value = hasil;
+                
+                //alert(hasil);
+                //alert(document.getElementById("rdTambah").checked==true);
+            }
+        </script>
+    </body>
+</html>

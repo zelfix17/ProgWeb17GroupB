@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contoh JS 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    
+    <p id="par1"></p>
+    <hr>
+    <label for="txtKeterangan">Keterangan :</label><br>
+    <input type="text" id="txtKeterangan"><br><br>
+   
+    <button type="button" onclick="SetParText()">Tambah Teks</button>
+    <button onclick="HapusText()">Hapus Text</button>
+    <script>
+        //document.getElementById("par1").innerText = "Hello Javascript !";
+        function SetParText(){
+            //document.getElementById("par1").innerHTML = "<strong>Hello Javascript !</strong>";
+            var keterangan = document.getElementById("txtKeterangan").value;
+            document.getElementById("par1").innerHTML = keterangan;
+        }
+
+        function HapusText(){
+            document.getElementById("par1").innerHTML = "";
+        }
+    </script>
+    </body>
+</html>
