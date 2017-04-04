@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    <p id="par1"></p>
+    <button type="button" id="btnHello" class="btn btn-default">Hello</button>
+    <hr>
+    <fieldset>
+        <legend>Hitung Luas Lingkaran</legend>
+
+        <label for="txtJari">Jari-jari :</label><br>
+        <input type="text" id="txtJari" placeholder="masukan jari-jari"><br><br>
+
+        <label for="txtHasil">Hasil :</label><br>
+        <input type="text" id="txtHasil" readonly="readonly"><br><br>
+
+        <button type="button" id="btnHitung">Hitung</button>
+    </fieldset>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+
+            //3.14*jari*jari
+
+            $("#btnHitung").click(function(){
+                var jari = parseFloat($("#txtJari").val());
+                var hasil = 3.14*jari*jari;
+                $("#txtHasil").val(hasil);
+            });
+            
+            $("#btnHello").click(function(){
+                 $("#par1").html("Hello JQuery !");
+            });
+
+
+        });
+    </script>
+    </body>
+</html>

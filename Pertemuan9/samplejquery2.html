@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h2>Form Mahasiswa</h2><br>
+
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="nim">Nim:</label>
+                        <input type="text" class="form-control" id="nim">
+                    </div>
+                    <div class="form-group">
+                        <label for="nama">Nama:</label>
+                        <input type="text" class="form-control" id="nama">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="ipk">Ipk:</label>
+                        <input type="text" class="form-control" id="ipk">
+                    </div>
+                    <button type="button" id="btnTambah" class="btn btn-default">Tambah</button>
+                </form>
+            </div>
+            <div class="col-md-6"></div>
+        </div><br>
+        <div class="row">
+            <div id="successMsg"></div>
+        </div>
+
+        <br><br>
+        <table id="tblMhs" class="table table-striped">
+        </table>
+    </div>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            function AddTableHeader() {
+                var myHeader = "<thead><tr><th>Nim</th><th>Nama</th><th>Email</th><th>Ipk</th></tr></thead>";
+                $("#tblMhs").append(myHeader);
+            }
+
+            function AddTableData() {
+                $("#tblMhs").empty();
+                AddTableHeader();
+                var data = "<tbody>";
+                for (i in arrMhs) {
+                    data += "<tr><td>" + arrMhs[i].Nim + "</td><td>" + arrMhs[i].Nama + "</td><td>" + arrMhs[i].Email +
+                        "</td><td>" + arrMhs[i].Ipk + "</td></tr>";
+                }
+                data += "</tbody>";
+                $("#tblMhs").append(data);
+            }
+
+            function TambahData(mhs) {
+                arrMhs.push(mhs);
+            }
+
+            $("#btnTambah").click(function () {
+                var nim = $("#nim").val();
+                var nama = $("#nama").val();
+                var email = $("#email").val();
+                var ipk = parseFloat($("#ipk").val());
+
+                var mhs = { Nim: nim, Nama: nama, Email: email, Ipk: ipk };
+
+                try{
+                    TambahData(mhs);
+                    AddTableData();
+                     $("#successMsg").html("<div class='alert alert-success alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" +
+                    "<strong>Berhasil!</strong> Data berhasil ditambah.</div>");
+                }
+                catch(err){
+                    alert(err.message);
+                }
+            });
+
+            var arrMhs = [
+                { Nim: "72170001", Nama: "Erick Kurniawan", Email: "erick@si.ukdw.ac.id", Ipk: 3.6 },
+                { Nim: "72170002", Nama: "Argo Wibowo", Email: "argo@si.ukdw.ac.id", Ipk: 3.8 },
+                { Nim: "72170003", Nama: "Budi Halim", Email: "halim@si.ukdw.ac.id", Ipk: 3.5 }
+            ];
+
+            AddTableData();
+
+        });
+    </script>
+</body>
+
+</html>
